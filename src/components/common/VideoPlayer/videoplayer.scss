@@ -1,0 +1,134 @@
+@import '../../../styles/partials/index.scss';
+
+.video-player-wrapper {
+    position: relative;
+    background-color: rgba(0, 0, 0, .4);
+    height: 500px;
+
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    
+    &:hover {
+        .video-controls-wrapper {
+            opacity: 1;
+            transition: opacity 35ms ease-in;
+        }
+    }
+
+    .video-over-control{
+        position: absolute;
+        z-index: 9;
+        background: rgba(0, 0, 0, .58);
+        width: 100%;
+        height: 100%;
+
+        .btn.btn-link {
+            color: $app-white-color;
+            position: relative;
+            font-size: 40px;
+            outline: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .video-controls-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 5px;
+        opacity: 1;
+        transition: opacity 35ms ease-in;
+        z-index: 10;
+
+        &::before {
+            content: '';
+            display: block;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2),
+             rgba(0, 0, 0, .55), rgba(0, 0, 0, .85));
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            opacity: 1;
+            pointer-events: none;
+            z-index: 2;
+            transition: opacity 15ms ease-out;
+        }
+
+        .video-controls {
+            position: relative;
+            z-index: 3;
+            font-size: $app-font-size-lg;
+
+            @include mobile {
+                font-size: $app-font-size-sm;
+            }
+        }
+
+        .video-duration {
+            padding-left: 10px;
+            color: $app-white-color;
+            font-weight: $app-font-weight-medium;
+        }
+
+        .btn.btn-link {
+            color: $app-white-color;
+            position: relative;
+            font-size: $app-font-size-lg;
+
+            &::before {
+                content: attr(data-title);
+                position: absolute;
+                display: none;
+                left: 0;
+                top: -50px;
+                background-color: rgba(0, 0, 0, 0.6);
+                color: $app-white-color;
+                font-weight: $app-font-weight-medium;
+                font-size: $app-font-size-sm;
+                padding: 4px 6px;
+                word-break: keep-all;
+                white-space: pre;
+            }
+              
+            &:hover::before {
+                display: inline-block;
+            }
+            
+            &:focus {
+                box-shadow: none;
+            }
+
+            @include mobile {
+                font-size: $app-font-size-sm;
+                padding: 0.35rem 0.4rem;
+            }
+        }
+
+        .video-controls-right {
+            .btn.btn-link {
+                &::before {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        height: 220px;
+    }
+}

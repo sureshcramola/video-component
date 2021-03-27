@@ -1,0 +1,79 @@
+@import "../../../styles/partials/index.scss";
+
+.container {
+  height: 520px;
+  position: relative;
+}
+
+.header {
+  font-weight: $app-font-weight-bold;
+}
+
+input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 6px;
+  left: 0;
+  font-size: $app-font-size-lg;
+  color: $app-grey-dark-1;
+  margin-left: 28px;
+}
+.button-wrap {
+  position: relative;
+}
+@media only screen and (max-width: 1800px) {
+  .imgg {
+    font-size: 80px;
+    margin-left: 27px;
+    color: $app-grey-dark-1;
+  }
+
+  .new-button {
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: $app-secondary-button-color;
+    font-size: $app-font-size-lg;
+    color: $app-white-color;
+    height: 40px;
+    width: 137px;
+    margin-right: 0px;
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+@media only screen and (max-width: 700px) {
+  .imgg {
+    font-size: 50px;
+    margin-left: 40px;
+    color: $app-grey-dark-1;
+  }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .new-button {
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: $app-secondary-button-color;
+    font-size: $app-font-size-lg;
+    color: $app-white-color;
+    height: 40px;
+    width: 137px;
+    margin-right: 100px;
+  }
+}

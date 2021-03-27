@@ -1,0 +1,74 @@
+@import "../../../../styles/partials";
+
+.video-description-wrapper {
+    padding: 10px 0;
+
+    h1 {
+        font-size: $app-font-size-xl;
+    }
+
+    .video-feedback-controls {
+        border-bottom: 1px solid $app-grey-dark-2;
+
+        .left-options {
+            flex: 0 0 50%;
+            & > span {
+                padding-right: 15px;
+
+                &:not(:first-child) {
+                    border-left: 2px solid $app-black-color;
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .right-feedback-controls {
+            flex: 0 0 50%;
+            text-align: right;
+        }
+
+        @include mobile {
+            flex-wrap: wrap;
+
+            .left-options, .right-feedback-controls {
+                flex: 0 0 100%;
+                font-size: $app-font-size-md;
+                text-align: left;
+
+                .btn {
+                    font-size: $app-font-size-md;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .video-detailed-description {
+        padding: 10px 0;
+
+        @include mobile { 
+            font-size: $app-font-size-sm;
+        }
+    }
+
+    .btn {
+        &.btn-link {
+            color: $app-grey-dark-1;
+            font-weight: $app-font-weight-medium;
+
+            &:hover, &:focus {
+                outline: none;
+                text-decoration: none;
+                box-shadow: none;
+            }
+
+            &.active {
+                color: $app-primary-color;
+            }
+
+            span {
+                padding-left: 5px;
+            }
+        }
+    }
+}

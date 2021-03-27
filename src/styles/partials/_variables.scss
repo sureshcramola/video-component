@@ -1,0 +1,41 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+$app-primary-color: #00ff00;
+$app-secondary-color: #848484;
+
+// App Background
+$app-primary-bg: #ffffff;
+$app-secondary-bg: #fafafa;
+
+// General Color
+$app-white-color: #ffffff;
+$app-black-color: #000000;
+
+$app-dark-theme-color:#222222;
+$app-dark-theme-color-l-1:#333333;
+// Grey Shades
+$app-grey-dark-1: #474545;
+$app-grey-dark-2: #848484;
+$app-grey-light: #e7e7e7;
+
+// Message color
+$app-error-color: #ff4141;
+$app-warning-color: #0271ce;
+$app-info-color: #ef7824;
+$app-success-color: #3db13d;
+
+// Button Color
+$app-primary-button-color:#00ff00;
+$app-secondary-button-color: #3db13d;
+
+//
+$app-video-progress-bg: #00ff00;
+$app-video-progress-bg-1: $app-grey-dark-1;
+
+$theme-colors: (
+  "primary": $app-primary-color,
+  "danger": $app-error-color
+);
+

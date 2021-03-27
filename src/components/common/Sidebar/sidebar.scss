@@ -1,0 +1,56 @@
+@import '../../../styles/partials/index.scss';
+
+.blocktube-app-dark {
+    .sidebar-nav {
+        background-color: $app-dark-theme-color;
+
+        ul {
+            li {
+                a {
+                    color: $app-white-color;
+                }
+            }
+        }
+    }
+}
+
+.sidebar-nav {
+    position: fixed;
+    height: 100vh;
+    width: 100px;
+    z-index: 9;
+    background-color: $app-white-color;
+    top: 60px;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            a {
+                padding: 20px 0;
+                display: block;
+                text-align: center;
+                border-bottom: 1px solid $app-grey-light;
+                text-decoration: none;
+                color: $app-grey-dark-2;
+                transition-duration: 250ms;
+                transition-property: padding-top, padding-bottom, color, background-color, width;
+                transition-timing-function: ease-in-out;
+                text-transform: capitalize;
+                font-weight: $app-font-weight-regular;
+                &:hover, &:focus, &.active {
+                    color: $app-primary-color;
+                }
+                span:last-child {
+                    font-size: $app-font-size-sm;
+                }
+            }
+            .sidebar-icon {
+                display: inline-block;
+                width: 100%;
+            }
+            
+        }
+    }
+}

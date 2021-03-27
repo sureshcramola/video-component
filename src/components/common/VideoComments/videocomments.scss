@@ -1,0 +1,49 @@
+@import "../../../styles/partials/index.scss";
+
+.hr {
+  background-color: $app-grey-dark-1;
+  height: 1px;
+}
+
+.user-comment-card {
+  &-nested {
+    margin-left: 70px;
+  }
+
+  .user-comment-body {
+    padding: 10px 15px 10px;
+    background: $app-white-color;
+  }
+
+  .comment-icon {
+    cursor: pointer;
+    font-size: $app-font-size-sm;
+
+    span {
+      padding-right: 15px;
+    }
+
+    &:hover {
+      color: $app-primary-color;
+    }
+  }
+
+  .comment-post-date {
+    font-size: $app-font-size-sm;
+  }
+
+  .comment-text {
+    font-size: $app-font-size-md;
+  }
+  
+  .user-name {
+    color: $app-black-color;
+    font-weight: $app-font-weight-bold;
+  }
+
+  @media only screen and (max-width: 800px) {
+    &-nested {
+      margin-left: 0px;
+    }
+  }
+}

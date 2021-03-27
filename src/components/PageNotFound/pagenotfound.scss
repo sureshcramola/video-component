@@ -1,0 +1,17 @@
+@import "../../styles/partials/index.scss";
+
+.page-not-found {
+    &-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        font-weight: $app-font-weight-semibold;
+    }
+    &-icon {
+        font-size: 60px;
+        color: $app-info-color;
+    }
+}

@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/bootstrap";
+@import "../../styles/partials/index.scss";
+
+.blocktube-app {
+  &-light, &-dark {
+    &::before {
+      background-color: rgba(238, 238, 238, 0.65);
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+      content: "";
+      display: block;
+      height: 100%;
+      min-height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100px;
+      z-index: 1;
+      border-right: 1px solid $app-grey-light;
+    }
+
+    min-height: 100vh;
+    background: $app-secondary-bg;
+  }
+
+  &-dark {
+    background-color: $app-dark-theme-color-l-1;
+    color: $app-white-color;
+  }
+}

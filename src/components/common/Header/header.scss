@@ -1,0 +1,125 @@
+@import "../../../styles/partials/index.scss";
+
+.blocktube-app-dark {
+  .main-header {
+    background-color: $app-dark-theme-color;
+
+    .navbar-light .navbar-nav .nav-link {
+      color: $app-white-color;
+    }
+
+    .dropdown-menu {
+      background-color: $app-dark-theme-color;
+
+      .dropdown-item {
+        color: $app-white-color;
+      }
+    }
+  }
+}
+
+.main-header {
+    height: 60px;
+    position: fixed;
+    z-index: 11;
+    background-color: $app-white-color;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    padding-right: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
+
+  .navbar {
+    padding: 0;
+
+    .app-logo {
+      max-width: 50px;
+      width: 100%;
+    }
+
+    &-nav .dropdown-menu {
+      position: absolute;
+    }
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    font-size: $app-font-size-md;
+    font-weight: $app-font-weight-medium;
+
+    &:hover,
+    &:focus {
+      color: $app-primary-color;
+    }
+  }
+
+  .navbar-brand {
+    display: block;
+    height: 60px;
+    line-height: 50px;
+    text-align: center;
+    width: 100px;
+    border-right: 1px solid rgba(0, 0, 0, 0.04);
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 100px;
+      top: 0px;
+      z-index: -1;
+      width: 15px;
+      height: 100%;
+      background: -moz-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: -webkit-linear-gradient(
+        left,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+      background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.04) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+}
+
+.user-menu-dropdown {
+
+  .dropdown-item {
+    font-size: $app-font-size-md;
+    padding: 0.25rem .65rem;
+
+    &:not(.custom-switch).active, &:not(.custom-switch):active {
+      background-color: $app-primary-color;
+    }
+
+    &.custom-switch.active, &.custom-switch:active {
+      background-color: transparent;
+      color: #212529;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &.custom-switch .custom-control-label {
+      padding-right: 36px;
+      &::before, &::after {
+        right: 0;
+        left: auto;
+      }
+
+      &::after {
+        right: 3px;
+      }
+    }
+    
+    &.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+      transform: translateX(-0.68rem);
+    }
+  }
+}
